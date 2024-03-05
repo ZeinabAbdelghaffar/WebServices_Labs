@@ -12,20 +12,28 @@ This project provides a simple web interface to display weather forecasts for se
 - `city-list.json`: A JSON file containing a list of cities and their IDs for selection in the weather forecast interface.
 
 ## Requirements
+1. Create a PHP script with a dropdown menu of all Egyptian cities.
+2. When the user selects a city, display a weather report that includes:
+   - Temperature (minimum and maximum)
+   - Humidity
+   - Wind speed
+   - Sky status
+3. Use cURL to fetch weather information from the OpenWeatherMap API.
+4. Repeat the same functionality using Guzzle, and don't forget to use Composer to install Guzzle.
 
-1. Create a PHP script that has a drop-down menu of all Egyptian cities. When the user chooses a city, they should get a weather report that includes the temperature (minimum and maximum) and humidity.
-2. The interface should have a drop-down menu to select a city and a "Get Weather" button to submit the selection.
-3. After submission, the interface should display the weather report in the following format:
-   - A heading displaying the weather status.
-   - The day of the week and time (e.g., Monday 00:00 PM/AM).
-   - The day, month, and year (e.g., 1st January, 2023).
-   - The sky status.
-   - An image representing the sky status.
-   - The temperature in Celsius (e.g., 11°C).
-   - The humidity percentage (e.g., humidity: 50%).
-   - The wind speed in kilometers per hour (e.g., wind: 10 km/h).
-4. Use cURL for getting the weather information.
-5. Repeat the same behavior using Guzzle HTTP client library (Don’t forget to use Composer).
+### Before Submit
+- Select a city from the dropdown menu.
+- Click on "Get Weather" button.
+
+### After Submit
+- Display the weather status with the following information:
+   - Day of the week and time
+   - Date (dayth month, year)
+   - Sky status
+   - Weather icon
+   - Temperature in Celsius
+   - Humidity percentage
+   - Wind speed in km/h
 
 ## How to Use
 
