@@ -59,9 +59,9 @@ This project is for educational purposes only. Use at your own risk.
 
 ---
 
-# Lab2 : OS39 Glasses Shop MySQL Project
+# Lab2 : Glasses Shop MySQL Project
 
-This project is a MySQL implementation for the OS39 Glasses Shop, including database creation, connection handling, basic CRUD operations, and a RESTful web service for accessing item information.
+This project is a MySQL implementation for the Glasses Shop, including database creation, connection handling, basic CRUD operations, and a RESTful web service for accessing item information.
 
 ## Setup Instructions
 
