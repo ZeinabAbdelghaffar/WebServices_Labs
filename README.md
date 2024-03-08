@@ -91,4 +91,48 @@ This project is a MySQL implementation for the OS39 Glasses Shop, including data
 
 - Use the `products.sql` file to import products to your database.
 - Utilize the `MySQLHandler` class for SQL queries, which has methods for select, update, delete, and update.
+
+## Output using Postman
+1. **Try GlassShopAPI**
+   - Endpoint: `GET GlassShopAPI.php`
+   - Response: 
+![image](https://github.com/ZeinabAbdelghaffar/WebServices_Labs/assets/87963230/d88adef0-3fab-4fd1-9f0e-a70f6433a7e8)
+
+2. **Get all items**
+   - Endpoint: `GET GlassShopAPI.php/items`
+   - Response: List of all items.
+![image](https://github.com/ZeinabAbdelghaffar/WebServices_Labs/assets/87963230/b90525b7-104b-4f19-9eda-55cff7cb36b6)
+
+3. **Get an item that does not exist**
+   - Endpoint: `GET GlassShopAPI.php/items/99`
+   - Response: Resourse ID doesn't exist.
+![image](https://github.com/ZeinabAbdelghaffar/WebServices_Labs/assets/87963230/47d58e69-f302-468f-84e7-fdb67287e9ea)
+
+4. **Get an existing item**
+   - Endpoint: `GET GlassShopAPI.php/items/90`
+   - Response: Details of item 90.
+![image](https://github.com/ZeinabAbdelghaffar/WebServices_Labs/assets/87963230/df3c9903-0600-4ba9-ac37-0b7bc38f38b5)
+
+5. **Delete an existing item**
+   - Endpoint: `DELETE GlassShopAPI.php/items/90`
+   - Response: Item 90 deleted successfully.
+![image](https://github.com/ZeinabAbdelghaffar/WebServices_Labs/assets/87963230/018b8c0a-7606-41d9-9081-a42607099bdf)
+
+6. **Update an existing item**
+   - Endpoint: `PUT GlassShopAPI.php/items/90`
+   - Body: Update data for item 90.
+   - Response: Updated item 90.
+![image](https://github.com/ZeinabAbdelghaffar/WebServices_Labs/assets/87963230/579f287e-1851-47a4-943b-93a8432f73be)
+
+7. **Attempt to purge an item**
+   - Endpoint: `PURGE GlassShopAPI.php/items/90`
+   - Response: 405 Method Not Allowed.
+![image](https://github.com/ZeinabAbdelghaffar/WebServices_Labs/assets/87963230/9024b8b8-89ce-49ec-884f-4a8958579425)
+
+
+8. **Get all items**
+   - Endpoint: `GET GlassShopAPI.php/items/`
+   - Response: List of all items.
+![image](https://github.com/ZeinabAbdelghaffar/WebServices_Labs/assets/87963230/e6940feb-8fc6-4780-8b68-31019eebfb0a)
+
 ---
