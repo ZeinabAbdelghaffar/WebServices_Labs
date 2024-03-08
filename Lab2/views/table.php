@@ -1,5 +1,4 @@
 <?php
-
 echo "<table border='1'>";
 $record_index = 0;
 foreach ($all_records as $item)

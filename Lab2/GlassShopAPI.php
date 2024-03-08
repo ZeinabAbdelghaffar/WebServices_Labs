@@ -27,20 +27,6 @@ function getOne($sid)
     $searched_glasses = Capsule::table('items')->find($sid);
     return $searched_glasses;
 }
-// function addNew($data)
-// {
-//     // $d = explode("", $data);
-//     $data = $data["name"];
-//     return "Name : $data";
-// }
-// function deleteOne($id)
-// {
-//     return "Deleting one: $id";
-// }
-// function updateOne($id, $data)
-// {
-//     return "Updating one: $id";
-// }
 
 $path = explode($_SERVER['SCRIPT_NAME'], $_SERVER["REQUEST_URI"])[1];
 $uriParts = explode("/", $path);
@@ -65,20 +51,11 @@ if ($resource !== "items")
     die;
 }
 
-// echo "path: $path <br>";
-// echo "uriParts:  ";
-// print_r($uriParts);
-// echo "<br>resource: $resource <br>";
-// echo "id: $id <br>";
-// echo "method: $method <br>";
-// die();
-
-
 if ($id === "")
 {
     switch ($method)
     {
-        case "POST": //Adding new
+        case "POST":
 
             break;
         case "GET":
@@ -93,16 +70,14 @@ if ($id === "")
             catch (Exception $exception)
             {
                 http_response_code(404);
-                // $response['error'] = $exception->getMessage();
                 $response['error'] = "internal server error!";
             }
             $response['success'] = $success;
             echo json_encode($response);
-            // echo "get all"; // here should be a function
             break;
         default:
             http_response_code(405);
-            echo "405 Unsupported method"; // here should be a function
+            echo "405 Unsupported method";
     }
 }
 else
@@ -135,7 +110,6 @@ else
             catch (Exception $exception)
             {
                 http_response_code(404);
-                // $response['error'] = $exception->getMessage();
                 $response['error'] = "internal server error!";
             }
             $response['success'] = $success;
@@ -143,7 +117,7 @@ else
             break;
         default:
             http_response_code(405);
-            echo "405 Unsupported method"; // here should be a function
+            echo "405 Unsupported method";
     }
 }
 die;
